@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon bar -->
+    <link rel="icon" href="/logo/icontab.svg" type="image/png">
+    <!-- import css -->
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <title>Lazyearth.water.waterquality</title>
+</head>
+<body>
+    <div class="grid-container5">
+        <!-- ----------------------------------------------------navbar---------------------------------------------------- -->
+        <div class="header-item">
+            <div class="flex-container">
+                <div class="item item-1">space 1</div>
+                <!-- i dont know why but if you want to use logo06.svg you have to use ../../ -->
+                <!-- <div class="item item-2"><img class = 'img' src="logo06.svg" alt=""></div> -->
+                <div class="item item-2"><a href="../../index.html"><img class = 'img' src="../../component/logo06.svg" alt=""></a></div>
+                <div class="item item-3">space 2</div>
+                <div class="item item-4">
+                    <div><a class="item_element" href="../../install/install.html">Install</a></div>
+                    <div><a class="item_element" href="../../Userguide/userguide_homepage.html">User Guide</a></div>
+                    <div><a class="item_element" href="../../learn.html">Learn</a></div>
+                    <div><a class="item_element" href="#">Community</a></div>
+                    <div><a class="item_element" href="#">About us</a></div>
+                    <div><a class="item_element" href="#">Contribute</a></div>
+                </div>
+                <div class="item item-5">space 3</div>
+            </div>
+        </div>
+
+    <!-- --------------------------------------------------------sidebar--------------------------------------------------------- -->
+    <div class="sidebar-item">
+        <div class="frame-8">
+            <ul>
+                <li><a href="#" class="li_father">InputOutput</a>
+                    <ul>
+                        <li><a href="../1.Inputoutput/bandopen.html">bandopen</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="li_father">Common</a>
+                    <ul>
+                        <li><a href="../2.Common/genimg.html" class="li_kid">genimg</a></li>
+                        <li><a href="../2.Common/gennguasian.html" class="li_kid">genguassin</a></li>
+                        <li><a href="../2.Common/falsecolor.html" class="li_kid">falsecolor</a></li>
+                        <li><a href="../2.Common/truecolor.html" class="li_kid">truecolor</a></li>
+                        <li><a href="../2.Common/band_combinationd.html" class="li_kid">bandcombination</a></li>
+                        <li><a href="../../404.html" class="li_kid">clearcloud</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="li_father">Remote sensing index</a>
+                    <ul>
+                        <li><a href="../3.Calculation/NDVI.html" class="li_kid">NDVI</a></li>
+                        <li><a href="../3.Calculation/NDMI.html" class="li_kid">NDMI</a></li>
+                        <li><a href="../3.Calculation/BSI.html" class="li_kid">BSI</a></li>
+                        <li><a href="../3.Calculation/EVI.html" class="li_kid">EVI</a></li>
+                        <li><a href="../3.Calculation/NDWI.html" class="li_kid">NDWI</a></li>
+                        <li><a href="../3.Calculation/NMDI.html" class="li_kid">NMDI</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="li_father">Water</a>
+                    <ul>
+                        <li><a href="../3.Calculation/waterdetection.html" class="li_kid">waterdetection</a></li>
+                        <li><a href="../3.Calculation/waterquality.html" class="li_kid">waterquality</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="li_father">Virsualize</a>
+                    <ul>
+                        <li><a href="../4.Visualize/plotshow.html" class="li_kid">plotshow</a></li>
+                        <li><a href="../../404.html" class="li_kid">montage</a></li>
+                        <li><a href="../4.Visualize/bluesea.html" class="li_kid">bluesea</a></li>
+                        <li><a href="../4.Visualize/sweetrose.html" class="li_kid">sweetrose</a></li>
+                        <li><a href="../4.Visualize/superresolution.html" class="li_kid">superressolution</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- rightbar -->
+    <div class="rightbar-item">
+        <div class = "sidebar2">
+            <div class="frame-9">
+                <ul>
+                    <li><a href="#" class="li_father">Waterdetection</a>
+                        <ul>
+                            <li><a href="#topic">water.waterquality()</a></li>
+                            <li><a href="#parameter">parameter</a></li>
+                            <li><a href="#return">return</a></li>
+                            <li><a href="#note">notes</a></li>
+                            <li><a href="#reference">reference</a></li>
+                            <li><a href="#ex1">example 1 : waterquality (Local)</a></li>
+                            <li><a href="#ex2">example 2 : waterquality (Datacube)</a></li>
+                            <li><a href="#ex3">example 3 : Waterquality colormap jet and datarange is 0 to 50 (Datacube)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </div>
+        <!-- content -->
+        <div class="content-item">
+            <div class="content_header" id="topic"><h1>Waterquality</h1></div>
+            <div class="content_main" id="function">
+                <h3>water.waterquality()</h3>
+                <p>Water quality was assessed from landsat8 satellite images using red band,green band,nir band,blur band,mir band and mir2 band images.<br>
+                    By taking the water area data through the equation to convert the values ​​and display the results as appropriate.</p>
+            </div>
+            <div class="content_main" id="parameter">
+                <h3>Parameter : watermask : boolean</h3>
+                <p>Water area to be processed</p>
+                <h3 class="parameter_item">range : list [min,max] optional</h3>
+                <p>range of value</p>
+                <h3 class="parameter_item">colormap : str,optional</h3>
+                <p>colormap used to display values</p>                
+                <h3 class="parameter_item">bright : int,optional</h3>
+                <p>image brightness</p>                
+                <h3 class="parameter_item">title : str,optional</h3>
+                <p>Display name</p>                
+                <h3 class="parameter_item">label : str,optional</h3>
+                <p>unit of measure</p>
+            </div>
+        <div class="content_main" id = 'return'>
+            <h3>Return :</h3><p>&nbsp;ndarray</p>
+        </div>
+        <div class="content_main" id = 'note'>
+            <h3>Notes</h3>
+            <p>The agglomerative clustering is the most common type of hierarchical clustering used to group objects in clusters based on their similarity. It’s also known as AGNES (Agglomerative Nesting). The algorithm starts by treating each object as a singleton cluster. Next, pairs of clusters are successively merged until all clusters have been merged into one big cluster containing all objects. The result is a tree-based representation of the objects, named dendrogram.</p>
+            <p>Naive Bayes is a simple technique for constructing classifiers: models that assign class labels to problem instances, represented as vectors of feature values, where the class labels are drawn from some finite set.</p>
+        </div>
+        <div class="content_main" id = 'reference'>
+            <h3>References</h3>
+            <a href="https://github.com/cordmaur/WaterQuality" target="_blank"><p>1 medium "Waterquality in High Resolution Satellite Images using the waterdetect python package",</p></a>
+        </div>
+        <div class="content_main" id="ex1">
+            <h3>Example 1</h3>
+            <p>waterquality (Local)</p>
+        </div>
+        <div class="content_example">
+            <pre>>>> # import library</pre>
+            <pre>>>> from lazyearth.common import objearth as oe</pre>
+            <pre>>>> from lazyearth.water import water</pre>
+            <pre>>>> # Load landsat8 data</pre>
+            <pre>>>> blue  = oe.bandopen("...\LC08_L1TP_015042_20211223_20211230_01_T1_sr_band2.tif")</pre>
+            <pre>>>> green = oe.bandopen("...\LC08_L1TP_015042_20211223_20211230_01_T1_sr_band3.tif")</pre>
+            <pre>>>> red   = oe.bandopen("...\LC08_L1TP_015042_20211223_20211230_01_T1_sr_band4.tif")</pre>
+            <pre>>>> nir   = oe.bandopen("...\LC08_L1TP_015042_20211223_20211230_01_T1_sr_band5.tif")</pre>
+            <pre>>>> mir   = oe.bandopen("...\LC08_L1TP_015042_20211223_20211230_01_T1_sr_band6.tif")</pre>
+            <pre>>>> mir2  = oe.bandopen("...\LC08_L1TP_015042_20211223_20211230_01_T1_sr_band7.tif")</pre>
+            <pre>>>> rgb = oe.bandcombination(red,green,blue)</pre>
+            <pre>>>> oe.plotshow(rgb)</pre>
+            <img src="Calculation_img/rgb.png" width = 50% alt="">
+            <pre>>>> # prepare data</pre>
+            <pre>>>> ls8_bands = {'Blue':blue,
+                'Green':green,
+                'Red':red,
+                'Nir':nir,
+                'Mir':mir,
+                'Mir2':mir2}</pre>
+            <pre>>>> # Water quality</pre>
+            <pre>>>> Wq = water(ls8_bands).waterquality()</pre>
+            <pre>>>> oe.plotshow(Wq)</pre>
+            <img src="Calculation_img/waterquality10.png" width = 50% alt="">
+        </div>
+
+        <div class="content_main" id="ex2">
+            <h3>Example 2</h3>
+            <p>Waterquality (Datacube)</p>
+        </div>
+        <div class="content_example">
+            <pre>>>> # import library</pre>
+            <pre>>>> from lazyearth.common import objearth as oe</pre>
+            <pre>>>> from lazyearth.water import water</pre>
+            <pre>>>> print(ds)</pre>
+<pre>
+&lt;xarray.Dataset&gt;
+Dimensions:      (latitude: 743, longitude: 743)
+Coordinates:
+    time         datetime64[ns] 2015-07-02T11:59:59.999999
+* latitude     (latitude) float64 -27.5 -27.5 -27.5 ... -27.7 -27.7 -27.7
+* longitude    (longitude) float64 153.3 153.3 153.3 ... 153.5 153.5 153.5
+    spatial_ref  int32 4326
+Data variables:
+    blue         (latitude, longitude) int16 462 461 461 459 ... 359 363 359 358
+    green        (latitude, longitude) int16 478 475 474 470 ... 255 256 251 252
+    red          (latitude, longitude) int16 215 212 210 208 ... 165 166 161 162
+    nir          (latitude, longitude) int16 82 83 82 80 78 ... 143 146 140 140
+    swir1        (latitude, longitude) int16 49 49 48 47 47 ... 109 112 107 109
+    swir2        (latitude, longitude) int16 40 41 40 38 37 ... 92 91 92 90 93
+    sdev         (latitude, longitude) float32 0.004089 0.004165 ... 0.01818
+    edev         (latitude, longitude) float32 92.71 95.55 97.62 ... 252.3 231.2
+    bcdev        (latitude, longitude) float32 0.07602 0.07638 ... 0.2588 0.2622
+    count        (latitude, longitude) int16 17 17 17 17 17 ... 18 18 18 18 18
+Attributes:
+    crs:           EPSG:4326
+    grid_mapping:  spatial_ref
+</pre>
+            <pre>>>> rgb = oe.bandcombination(ds.red,ds.green,ds.blue)</pre>
+            <pre>>>> oe.plotshow(rgb)</pre>
+            <img src="Calculation_img/waterquality_rgb.png" width = 50% alt="">
+            <pre>>>> # Water detection</pre>
+            <pre>>>> Wq = water(ds).waterquality()</pre>
+            <pre>>>> oe.plotshow(Wq)</pre>
+            <img src="Calculation_img/waterquality_image.png" width = 50% alt="">
+        </div>
+
+        <div class="content_main" id="ex3">
+            <h3>Example 3</h3>
+            <p>Waterquality colormap jet and datarange is 0 to 50 (Datacube)</p>
+        </div>
+        <div class="content_example">
+            <pre>>>> # import library</pre>
+            <pre>>>> from lazyearth.common import objearth as oe</pre>
+            <pre>>>> from lazyearth.water import water</pre>
+            <pre>>>> print(ds)</pre>
+<pre>
+&lt;xarray.Dataset&gt;
+Dimensions:      (latitude: 743, longitude: 743)
+Coordinates:
+    time         datetime64[ns] 2015-07-02T11:59:59.999999
+* latitude     (latitude) float64 -27.5 -27.5 -27.5 ... -27.7 -27.7 -27.7
+* longitude    (longitude) float64 153.3 153.3 153.3 ... 153.5 153.5 153.5
+    spatial_ref  int32 4326
+Data variables:
+    blue         (latitude, longitude) int16 462 461 461 459 ... 359 363 359 358
+    green        (latitude, longitude) int16 478 475 474 470 ... 255 256 251 252
+    red          (latitude, longitude) int16 215 212 210 208 ... 165 166 161 162
+    nir          (latitude, longitude) int16 82 83 82 80 78 ... 143 146 140 140
+    swir1        (latitude, longitude) int16 49 49 48 47 47 ... 109 112 107 109
+    swir2        (latitude, longitude) int16 40 41 40 38 37 ... 92 91 92 90 93
+    sdev         (latitude, longitude) float32 0.004089 0.004165 ... 0.01818
+    edev         (latitude, longitude) float32 92.71 95.55 97.62 ... 252.3 231.2
+    bcdev        (latitude, longitude) float32 0.07602 0.07638 ... 0.2588 0.2622
+    count        (latitude, longitude) int16 17 17 17 17 17 ... 18 18 18 18 18
+Attributes:
+    crs:           EPSG:4326
+    grid_mapping:  spatial_ref
+</pre>
+            <pre>>>> # Water detection</pre>
+            <pre>>>> Wq2 = water(ds).waterquality(colormap='jet',datarange=(0,50))</pre>
+            <pre>>>> oe.plotshow(Wq2)</pre>
+            <img src="Calculation_img/waterquality_image_jet.png" width = 50% alt="">
+        </div>
+    </div>
+</body>
+</html>
+
+

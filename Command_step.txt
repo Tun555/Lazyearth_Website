@@ -1,0 +1,7 @@
+*1.Copy file from lazyearth_font_end --> lazyearth_Website
+2.Open Anaconda prompt
+cd C:\Users\tul\Desktop\lazyearth_deploy
+firebase deploy
+start https://lazyearth.org/
+
+3.Refresh https://lazyearth-1e7e7.web.app/

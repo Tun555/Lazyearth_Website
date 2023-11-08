@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon bar -->
+    <link rel="icon" href="/logo/icontab.svg" type="image/png">
+    <!-- import css -->
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <title>Lazyearth.common.genimg</title>
+</head>
+<body>
+    <div class="grid-container5">
+        <!-- ----------------------------------------------------navbar---------------------------------------------------- -->
+        <div class="header-item">
+            <div class="flex-container">
+                <div class="item item-1">space 1</div>
+                <!-- i dont know why but if you want to use logo06.svg you have to use ../../ -->
+                <!-- <div class="item item-2"><img class = 'img' src="logo06.svg" alt=""></div> -->
+                <div class="item item-2"><a href="../../index.html"><img class = 'img' src="../../component/logo06.svg" alt=""></a></div>
+                <div class="item item-3">space 2</div>
+                <div class="item item-4">
+                    <div><a class="item_element" href="../../install/install.html">Install</a></div>
+                    <div><a class="item_element" href="../../Userguide/userguide_homepage.html">User Guide</a></div>
+                    <div><a class="item_element" href="../../learn.html">Learn</a></div>
+                    <div><a class="item_element" href="#">Community</a></div>
+                    <div><a class="item_element" href="#">About us</a></div>
+                    <div><a class="item_element" href="#">Contribute</a></div>
+                </div>
+                <div class="item item-5">space 3</div>
+            </div>
+        </div>
+
+    <!-- --------------------------------------------------------sidebar--------------------------------------------------------- -->
+    <div class="sidebar-item">
+        <div class="frame-8">
+            <ul>
+                <li><a href="#" class="li_father">InputOutput</a>
+                    <ul>
+                        <li><a href="../1.Inputoutput/bandopen.html">bandopen</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="li_father">Common</a>
+                    <ul>
+                        <li><a href="#" class="li_kid">genimg</a></li>
+                        <li><a href="../2.Common/gennguasian.html" class="li_kid">genguassin</a></li>
+                        <li><a href="../2.Common/falsecolor.html" class="li_kid">falsecolor</a></li>
+                        <li><a href="../2.Common/truecolor.html" class="li_kid">truecolor</a></li>
+                        <li><a href="../2.Common/band_combinationd.html" class="li_kid">bandcombination</a></li>
+                        <li><a href="../../404.html" class="li_kid">clearcloud</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="li_father">Remote sensing index</a>
+                    <ul>
+                        <li><a href="../3.Calculation/NDVI.html" class="li_kid">NDVI</a></li>
+                        <li><a href="../3.Calculation/NDMI.html" class="li_kid">NDMI</a></li>
+                        <li><a href="../3.Calculation/BSI.html" class="li_kid">BSI</a></li>
+                        <li><a href="../3.Calculation/EVI.html" class="li_kid">EVI</a></li>
+                        <li><a href="../3.Calculation/NDWI.html" class="li_kid">NDWI</a></li>
+                        <li><a href="../3.Calculation/NMDI.html" class="li_kid">NMDI</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="li_father">Water</a>
+                    <ul>
+                        <li><a href="../3.Calculation/waterdetection.html" class="li_kid">waterdetection</a></li>
+                        <li><a href="../3.Calculation/waterquality.html" class="li_kid">waterquality</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="li_father">Virsualize</a>
+                    <ul>
+                        <li><a href="../4.Visualize/plotshow.html" class="li_kid">plotshow</a></li>
+                        <li><a href="../../404.html" class="li_kid">montage</a></li>
+                        <li><a href="../4.Visualize/bluesea.html" class="li_kid">bluesea</a></li>
+                        <li><a href="../4.Visualize/sweetrose.html" class="li_kid">sweetrose</a></li>
+                        <li><a href="../4.Visualize/superresolution.html" class="li_kid">superressolution</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- rightbar -->
+        <div class="rightbar-item">
+            <div class = "sidebar2">
+                <div class="frame-9">
+                    <ul>
+                        <li><a href="#" class="li_father">genimg</a>
+                            <ul>
+                                <li><a href="#topic">objearth.common.genimg()</a></li>
+                                <li><a href="#parameter">parameter</a></li>
+                                <li><a href="#return">return</a></li>
+                                <!-- <li><a href="#reference">reference</a></li> -->
+                                <li><a href="#ex1">example 1 : create simple array</a></li>
+                                <li><a href="#ex2">example 2 : plot genimg</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+
+        <!-- content -->
+        <div class="content-item">
+            <div class="content_header" id="topic"><h1>Genimg</h1></div>
+            <div class="content_main" id="function">
+                <h3>objearth.common.genimg()</h3>
+                <p>Used for creating an array to use as an image for testing.</p>
+            </div>
+            <div class="content_main" id="parameter">
+                <h3>Parameter : Size : list,optional</h3>
+                <p>Size of array</p>
+                <h3 class="parameter_item">range : list,optional</h3>
+                <p>Range of value</p>
+                <h3 class="parameter_item">nan : int,optional</h3>
+                <p>Number of nan</p>                
+                <h3 class="parameter_item">inf : int,optional</h3>
+                <p>Number of infinity</p>
+                
+            </div>
+            <div class="content_main" id = 'return'>
+                <h3>Return :</h3><p>&nbsp;ndarray</p>
+            </div>
+            <!-- <div class="content_main" id = 'reference'>
+                <h3>References</h3>
+                <p>1 gdal "Opening the File", https://gdal.org/tutorials/raster_api_tut.html</p>
+            </div> -->
+            <div class="content_main" id="ex1">
+                <h3>Example1</h3>
+                <p>create simple array</p>
+            </div>
+            <div class="content_example">
+                <pre>>>> from lazyearth.common import objearth as oe</pre>
+                <pre>>>> oe.genimg()</pre>
+                <pre>>>> array([[ 0.6793952 , -0.81620819],
+        [-0.62274242, -0.38527724]])</pre>
+            </div>
+
+            <div class="content_main">
+                <p>create array with special size and value</p>
+            </div>
+            <div class="content_example">
+                <pre>>>> oe.genimg(size=[5,5],range=[-10,10])</pre>
+                <pre>>>> array([[-8.6014487  , -4.1402669 ,  4.13306626, -0.35697446,  8.11139776],
+           [-4.26807551 , -4.8475852 , -7.69419216, -1.04074379,  4.09444996],
+           [-9.65702999 ,  4.80955952, -4.54168647,  3.23779609, -8.60125623],
+           [ 2.70531363 , -7.71183384,  0.42417152, -9.47133212,  9.26505475],
+           [-1.49992575 ,  8.62291597,  1.7773813 ,  1.27451696,  6.91072804]])</pre>
+            </div>
+            
+            <div class="content_main">
+                <p>create array with nan and inf</p>
+            </div>
+            <div class="content_example">
+                <pre>>>> oe.genimg(size=[3,3],range=[-10,10],nan=2,inf=2)</pre>
+                <pre>>>> array([[inf, 8.92091758, 0.614487 ],
+           [-3.896195 , 6.83857102,nan ],
+           [nan, 3.42085332,inf]])</pre>
+            </div>
+
+            <div class="content_main" id="ex2">
+                <h3>Example2</h3>
+                <p>plot genimg</p>  
+            </div>
+            <div class="content_example">
+                <pre>>>> from lazyearth.common import objearth as oe</pre>
+                <pre>>>> oe.genimg()</pre>
+                <img src="Common_img/genimg.PNG" width = 50% alt="">
+            </div>
+
+            
+        </div>        
+    </div>
+</body>
+</html>
+

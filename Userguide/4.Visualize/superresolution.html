@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon bar -->
+    <link rel="icon" href="/logo/icontab.svg" type="image/png">
+    <!-- import css -->
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <title>Lazyearth.virtual.superresolution</title>
+    
+</head>
+<body>
+    <div class="grid-container5">
+        <!-- ----------------------------------------------------navbar---------------------------------------------------- -->
+        <div class="header-item">
+            <div class="flex-container">
+                <div class="item item-1">space 1</div>
+                <!-- i dont know why but if you want to use logo06.svg you have to use ../../ -->
+                <!-- <div class="item item-2"><img class = 'img' src="logo06.svg" alt=""></div> -->
+                <div class="item item-2"><a href="../../index.html"><img class = 'img' src="../../component/logo06.svg" alt=""></a></div>
+                <div class="item item-3">space 2</div>
+                <div class="item item-4">
+                    <div><a class="item_element" href="../../install/install.html">Install</a></div>
+                    <div><a class="item_element" href="../../Userguide/userguide_homepage.html">User Guide</a></div>
+                    <div><a class="item_element" href="../../learn.html">Learn</a></div>
+                    <div><a class="item_element" href="#">Community</a></div>
+                    <div><a class="item_element" href="#">About us</a></div>
+                    <div><a class="item_element" href="#">Contribute</a></div>
+                </div>
+                <div class="item item-5">space 3</div>
+            </div>
+        </div>
+    <!-- --------------------------------------------------------sidebar--------------------------------------------------------- -->
+    <div class="sidebar-item">
+        <div class="frame-8">
+            <ul>
+                <li><a href="#" class="li_father">InputOutput</a>
+                    <ul>
+                        <li><a href="../1.Inputoutput/bandopen.html">bandopen</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="li_father">Common</a>
+                    <ul>
+                        <li><a href="../2.Common/genimg.html" class="li_kid">genimg</a></li>
+                        <li><a href="../2.Common/gennguasian.html" class="li_kid">genguassin</a></li>
+                        <li><a href="../2.Common/falsecolor.html" class="li_kid">falsecolor</a></li>
+                        <li><a href="../2.Common/truecolor.html" class="li_kid">truecolor</a></li>
+                        <li><a href="../2.Common/band_combinationd.html" class="li_kid">bandcombination</a></li>
+                        <li><a href="../2.Common/clearcloud.html" class="li_kid">clearcloud</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="li_father">Remote sensing index</a>
+                    <ul>
+                        <li><a href="../3.Calculation/NDVI.html" class="li_kid">NDVI</a></li>
+                        <li><a href="../3.Calculation/NDMI.html" class="li_kid">NDMI</a></li>
+                        <li><a href="../3.Calculation/BSI.html" class="li_kid">BSI</a></li>
+                        <li><a href="../3.Calculation/EVI.html" class="li_kid">EVI</a></li>
+                        <li><a href="../3.Calculation/NDWI.html" class="li_kid">NDWI</a></li>
+                        <li><a href="../3.Calculation/NMDI.html" class="li_kid">NMDI</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="li_father">Water</a>
+                    <ul>
+                        <li><a href="../3.Calculation/waterdetection.html" class="li_kid">waterdetection</a></li>
+                        <li><a href="../3.Calculation/waterquality.html" class="li_kid">waterquality</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="li_father">Virsualize</a>
+                    <ul>
+                        <li><a href="../4.Visualize/plotshow.html" class="li_kid">plotshow</a></li>
+                        <li><a href="../../404.html" class="li_kid">montage</a></li>
+                        <li><a href="../4.Visualize/bluesea.html" class="li_kid">bluesea</a></li>
+                        <li><a href="../4.Visualize/sweetrose.html" class="li_kid">sweetrose</a></li>
+                        <li><a href="../4.Visualize/superresolution.html" class="li_kid">superressolution</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+        <!-- rightbar -->
+        <div class="rightbar-item">
+            <div class = "sidebar2">
+                <div class="frame-9">
+                    <ul>
+                        <li><a href="#" class="li_father">superresolution</a>
+                            <ul>
+                                <li><a href="#topic">virtual.superresolution()</a></li>
+                                <li><a href="#parameter">parameter</a></li>
+                                <li><a href="#reference">reference</a></li>
+                                <li><a href="#ex1">example : Improve RGB image</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+        <!-- content -->
+        <div class="content-item">
+            <div class="content_header" id="topic"><h1>Superresolution</h1></div>
+            <div class="content_main" id="function">
+                <h3>virtual.superresolution()</h3>
+                <p>Boost satellite image resolution and detail with our deep learning-based function.</p>
+                <p>This function is designed to enhance the resolution of satellite images. It accepts RGB images as input and utilizes a pre-trained deep learning model to improve their quality and resolution. The model has been trained specifically for this task, enabling it to effectively increase the level of detail in the images. As a result, the output images are clearer, sharper, and provide more information, making them more useful for various applications.</p>
+            </div>
+            <div class="content_main" id="parameter">
+                <h3>Parameter : rgb_image </h3>
+                <p>RGB image that you want to improve quality</p>
+            </div>
+            <div class="content_main" id = 'return'>
+                <h3>Return :</h3><p>&nbsp;ndarray</p>
+            </div>
+            <div class="content_main" id = 'reference'>
+                <h3>References</h3>
+                <a href="https://github.com/WarrenGreen/srcnn">1 Super Resolution for Satellite Imagery, https://github.com/WarrenGreen/srcnn</a>
+
+            </div>
+            <div class="content_main"  id="ex1">
+                <h3>Example</h3>
+                <p>Improve RGB image</p>
+            </div>
+            <div class="content_example">
+                <pre>>>> from lazyearth.virtual import superresolution</pre>
+                <pre>>>> print(Ds)</pre>
+<pre>
+&lt;xarray.Dataset&gt;
+Dimensions:      (latitude: 743, longitude: 743)
+Coordinates:
+    time         datetime64[ns] 2015-07-02T11:59:59.999999
+  * latitude     (latitude) float64 -27.5 -27.5 -27.5 ... -27.7 -27.7 -27.7
+  * longitude    (longitude) float64 153.3 153.3 153.3 ... 153.5 153.5 153.5
+    spatial_ref  int32 4326
+Data variables:
+    blue         (latitude, longitude) int16 462 461 461 459 ... 359 363 359 358
+    green        (latitude, longitude) int16 478 475 474 470 ... 255 256 251 252
+    red          (latitude, longitude) int16 215 212 210 208 ... 165 166 161 162
+Attributes:
+    crs:           EPSG:4326
+    grid_mapping:  spatial_ref
+</pre>
+                <pre>>>> rgb = oe.bandcombination(ds.red,ds.green,ds.blue)</pre>
+                <pre>>>> super_rgb = superresolution(rgb)</pre>
+                <pre>>>> oe.plotshow(rgb,super_rgb)</pre>
+                <img src="Visualize_img/super01.png" alt="">
+                <pre>>>> oe.plotshow(rgb,super_rgb,area=[300,700,0,400])</pre>
+                <img src="Visualize_img/super02.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

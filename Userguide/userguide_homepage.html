@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon bar -->
+    <link rel="icon" href="../../logo/icontab.svg" type="image/png">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- icon bar -->
+    <link rel="icon" href="/logo/icontab.svg" type="image/png">
+    <title>Lazyearth - User Guide</title>
+    <style>
+        body{
+            margin:0;
+            font-family: var(--bs-font-sans-serif);
+        }
+        /* ************************************************ grid area ************************************************ */
+        .grid-container5{
+            /* border:white solid 1px; */
+            display:grid;
+            grid-template-columns: 17.13% 65.72% 17.13%;
+            /* grid-template-rows: 100px 100vh; */
+            grid-template-rows: 60px 1fr;
+            grid-template-areas:
+            'header header header'
+            'sidebar content rightbar'
+            /* 'footer footer footer' */;
+            /* height:100vh; */
+        }
+        .header-item{
+            /* background-color: #b8d01b; */
+            grid-area:header;
+            text-align:center;
+        }
+        .content-item{
+            /* background-color: rgb(255,166,78); */
+            grid-area: content;
+            text-align:center;
+        }
+        /* .footer-item{
+            background-color: rgb(255,153,52);
+            color:white;
+            grid-area:footer;
+            text-align: center;
+        } */
+        .sidebar-item{
+            /* background-color: rgb(255,139,26); */
+            background-color: #212529;
+            grid-area:sidebar;
+            text-align: center;
+        }
+        .rightbar-item{
+            /* background-color: rgb(255,153,52); */
+            grid-area:rightbar;
+            /* text-align: center; */
+        }
+
+        /* ************************************************ navbar ************************************************ */
+        .flex-container{
+            display:flex;
+            background-color: #212529;
+        }
+        .item{
+            /* border:1px solid white; */
+            width:20px;
+            /* margin:10px; */
+            padding:10px;
+            width: 5%;
+            /* text-align:center; */
+        }
+        /* area */
+        .item-1{
+            width:3%;
+            color:#212529;
+            text-align: center;
+        }
+        .item-2{
+            width:25%;
+            text-align: left;
+        }
+        .item-3{
+            width:7%;
+            color:#212529;
+            text-align: center;
+        }
+        .item-4{
+            width:60%;
+            display: flex;
+            flex-direction:row;
+            flex-wrap:wrap;
+            justify-content: right;
+            align-items: center;
+            gap:15px;
+        }
+        .item-5{
+            width:5%;
+            color:#212529;
+            text-align: center;
+        /* link element */
+        }
+        .img{
+            /* margin-left: 10%; */
+            /* background-color: aqua; */
+        }
+        .item_element{
+            /* background-color: aqua; */
+            /* border: solid black 1px; */
+            /* margin: 0px 0px 0px 0px; */
+            padding: 0px 0px 0px 0px;
+            color:#739fa2;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .item_element:hover{
+            color:#879d9ecf;
+        }
+        /* ************************************************ sidebar ************************************************ */
+        .frame-8{
+            /* border:white solid 1px; */
+            /* width:329px; */
+            /* height: 100vh; */
+            /* position:fixed; */
+            text-align: left;
+            left:0;
+            top:60px;
+            background-color: #212529;
+            padding: 0px 0px 0px 30px;
+            overflow: auto;
+        }
+        .frame-8 ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        .frame-8 a{
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        .frame-8 ul ul{
+            padding-left: 20px;
+        }
+        .frame-8 a:hover{
+            color:#ddd
+        }
+        .frame-8 li{
+            padding: 8px;
+        }
+        .li_father{
+            font-size: 22px;
+        }
+        .li_kid{
+            font-size: 16px;
+        }
+        /* ************************************************ rightbar ************************************************ */
+        .sidebar2{
+            /* width:329px; */
+            height: 100vh;
+            /* position:fixed; */
+            right:0;
+            top:0px;
+            /* background-color: #212529; */
+            padding: 20px;
+            overflow: auto;
+        }
+        .frame-9{
+            /* width:329px; */
+            height: 100vh;
+            /* position:fixed; */
+            right:0;
+            top:60px;
+            /* background-color: #212529; */
+            padding: 0px 0px 0px 30px;
+            overflow: auto;
+            text-align: left;
+        }
+        .frame-9 ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        .frame-9 a{
+            color: #5a6060;
+            text-decoration: none;
+        }
+        .frame-9 ul ul{
+            padding-left: 20px;
+        }
+        .frame-9 a:hover{
+            color:#000000
+        }
+        .frame-9 li{
+            padding: 10px 0px 0px 0px;
+        }
+        .li_father{
+            font-size: 22px;
+        }
+        .li_kid{
+            font-size: 16px;
+        }
+        /* ************************************************ content ************************************************ */
+        .content-item{
+            margin:2%;
+            text-align: left;
+        }
+        .content_header{
+            background-color: #D3D3D4;
+            padding:5px;
+            /* margin:2%; */
+            border-radius: 10px;
+        }
+        .content_main{
+            text-align: left;
+            margin:1.5%;
+        }
+        .content_example{
+            text-align: left;
+            background-color: #D3D3D4 ;
+            border-radius: 10px;
+            /* margin:1.5%; */
+            padding:1%;
+        }
+        #return{
+            display: flex;
+            align-items: center;
+        }
+        #parameter p{
+            padding-left: 100px;
+        }
+        .content_topic{
+            background-color: #D3D3D4;
+            text-align: left;
+            padding: 0.5%;
+            padding-left: 2%;
+            border-radius: 10px;
+            margin-bottom: 1.3%;
+        }
+        .content-item a{
+            /* text-align:left; */
+            /* padding:10px; */
+            padding:3%;
+            color:black;
+            text-decoration: none;
+            margin-bottom: 100px;
+            font-size: 17px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #DFDFDF; /* color of line */
+            width: 100%;
+            height: 1px;
+            margin: 0;
+            padding: 0;
+        }
+        #topic{
+            text-align: center;
+        }
+        .item_kid{
+            padding:1.2%;
+        }
+        .item_kid a:hover{
+            color:#535353;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container5">
+        <!-- navbar -->
+        <div class="header-item">
+            <div id="navbarx"></div>
+        </div>
+
+        <!-- sidebar -->
+        <div class="sidebar-item">
+            <div id="sidebarx"></div>
+        </div>
+
+        <!-- rightbar -->
+        <div class="rightbar-item">
+            <div class = "sidebar2">
+                <div class="frame-9">
+                    <ul>
+                        <li><a href="#" class="li_father">User Guide</a>
+                            <ul>
+                                <li><a href="#1">1. InputOutput</a></li>
+                                <ul>
+                                    <li><a href="#1.1">1.1 bandopen</a></li>
+                                </ul>
+                                <li><a href="#2">2. Common</a></li>
+                                <ul>
+                                    <li><a href="#2.1">2.1 genimg</a></li>
+                                    <li><a href="#2.2">2.2 genguassian</a></li>
+                                    <li><a href="#2.3">2.3 falsecolor</a></li>
+                                    <li><a href="#2.4">2.4 truecolor</a></li>
+                                    <li><a href="#2.5">2.5 bandcombination</a></li>
+                                    <li><a href="#2.6">2.6 clearcloud</a></li>
+                                    <li><a href="#2.7">2.7 percentcloud</a></li>
+                                </ul>
+                                <li><a href="#3">3. Calculation</a></li>
+                                <ul>
+                                    <li><a href="#3.1">3.1 NDVI</a></li>
+                                    <li><a href="#3.2">3.2 NDMI</a></li>
+                                    <li><a href="#3.3">3.3 BSI</a></li>
+                                    <li><a href="#3.4">3.4 EVI</a></li>
+                                    <li><a href="#3.5">3.5 NDWI</a></li>
+                                    <li><a href="#3.6">3.6 NMDI</a></li>
+                                    <li><a href="#3.7">3.7 Waterdetection</a></li>
+                                    <li><a href="#3.8">3.8 waterquality</a></li>
+                                </ul>
+                                <li><a href="#4">4. Visualize</a></li>
+                                <ul>
+                                    <li><a href="#4.1">4.1 plotshow</a></li>
+                                    <li><a href="#4.2">4.2 montage</a></li>
+                                    <li><a href="#4.3">4.3 bluesea</a></li>
+                                    <li><a href="#4.4">4.4 leafwood</a></li>
+                                    <li><a href="#4.5">4.5 sweetrose</a></li>
+                                    <li><a href="#4.6">4.6 superresolution</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+
+        <!-- content -->
+        <div class="content-item">
+            <div class="content_header" id="topic"><h1>User Guide</h1></div>
+            <br><br>
+            <div class="content_topic" id="1">
+                <h2>1. Input Output</h2>
+            </div>
+            <div class="item_kid" id="1.1"><a href="/Userguide/1.Inputoutput/bandopen.html">1.1 bandopen</a></div>
+            <br>
+
+
+            <div class="content_topic" id="2">
+                <h2>2. Common</h2>
+            </div>
+            <div class="item_kid" id="2.1"><a href="/Userguide/2.Common/genimg.html">2.1 genimg</a></div>
+            <hr>
+            <div class="item_kid" id="2.2"><a href="/Userguide/2.Common/gennguasian.html">2.2 genguassian</a></div>
+            <hr>
+            <div class="item_kid" id="2.3"><a href="/Userguide/2.Common/falsecolor.html">2.3 falsecolor</a></div>
+            <hr>
+            <div class="item_kid" id="2.4"><a href="/Userguide/2.Common/truecolord.html">2.4 truecolor</a></div>
+            <hr>
+            <div class="item_kid" id="2.5"><a href="/Userguide/2.Common/band_combination.html">2.5 bandcombination</a></div>
+            <hr>
+            <div class="item_kid" id="2.6"><a href="/404.html">2.6 clearcloud</a></div>
+            <hr>
+            <div class="item_kid" id="2.7"><a href="/Userguide/2.Common/percentcloud.html">2.7 percentcloud</a></div>
+            <br>
+
+            <div class="content_topic" id="3">
+                <h2>3. Calculation</h2>
+            </div>
+            <div class="item_kid" id="3.1"><a href="/Userguide/3.Calculation/NDVI.html">3.1 NDVI</a></div>
+            <hr>
+            <div class="item_kid" id="3.2"><a href="/Userguide/3.Calculation/NDMI.html">3.2 NDMI</a></div>
+            <hr>
+            <div class="item_kid" id="3.3"><a href="/Userguide/3.Calculation/BSI.html">3.3 BSI</a></div>
+            <hr>
+            <div class="item_kid" id="3.4"><a href="/Userguide/3.Calculation/EVI.html">3.4 EVI</a></div>
+            <hr>
+            <div class="item_kid" id="3.5"><a href="/Userguide/3.Calculation/NDWI.html">3.5 NDWI</a></div>
+            <hr>
+            <div class="item_kid" id="3.6"><a href="/Userguide/3.Calculation/NMDI.html">3.6 NMDI</a></div>
+            <hr>
+            <div class="item_kid" id="3.7"><a href="/Userguide/3.Calculation/waterdetection.html">3.7 Waterdetection</a></div>
+            <hr>
+            <div class="item_kid" id="3.8"><a href="/Userguide/3.Calculation/waterquality.html">3.8 Waterquality</a></div>
+            <br>
+
+            <div class="content_topic" id="4">
+                <h2>4. Visualize</h2>
+            </div>
+            <div class="item_kid" id="4.1"><a href="/Userguide/4.Visualize/plotshow.html">4.1 plotshow</a></div>
+            <hr>
+            <div class="item_kid" id="4.2"><a href="/Userguide/4.Visualize/montage.html">4.2 montage</a></div>
+            <hr>
+            <div class="item_kid" id="4.3"><a href="/Userguide/4.Visualize/bluesea.html">4.3 bluesea</a></div>
+            <hr>
+            <div class="item_kid" id="4.4"><a href="/Userguide/4.Visualize/leafwood.html">4.4 leafwood</a></div>
+            <hr>
+            <div class="item_kid" id="4.5"><a href="/Userguide/4.Visualize/sweetrose.html">4.5 sweetrose</a></div>            
+            <hr>
+            <div class="item_kid" id="4.6"><a href="/Userguide/4.Visualize/superresolution.html">4.6 superresolution</a></div>
+        </div>
+        
+    </div>
+    <script>
+        // sidebar 
+        $(document).ready(function(){
+            // $("#sidebarx").load("sidebar_component.html");
+            $("#sidebarx").load("../../component/sidebar_component.html");
+        });
+        // navbar
+        $(document).ready(function(){
+            // $("#navbarx").load("navbar_component.html");
+            $("#navbarx").load("../../component/navbar_component.html");
+        });
+        </script>
+</body>
+</html>
+
